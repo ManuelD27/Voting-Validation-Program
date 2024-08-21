@@ -11,11 +11,24 @@ This is a simple C program that checks if a user is eligible to vote based on th
 - Checks if the age is within a realistic range.
 - Displays appropriate messages based on age.
 
-## Installation
+#include <stdio.h>
 
-To get started with this program, follow these steps:
+int main() {
+    int age;
 
-1. **Clone the Repository**
+    printf("Enter your age: ");
+    if (scanf("%d", &age) != 1) {
+        printf("Invalid input");
+        return 1;
+    }
 
-   ```bash
+    if (age >= 18) {
+        printf("You are allowed to vote!");
+    } else {
+        printf("You are not allowed to vote yet");
+    }
+
+    return 0;
+}
+
    git clone https://github.com/ManuelD27/Voting-Validation-Program.git
